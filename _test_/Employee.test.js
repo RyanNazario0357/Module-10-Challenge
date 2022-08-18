@@ -11,3 +11,8 @@ test('creates an employee object', () => {
     console.log('Employee ID: ${employee.id}');
     console.log('Employee E-Mail: ${employee.email}');
 });
+
+test('gets employee name', () => {
+    const employee = new Employee('Steve', 1, "steve@domain.com");
+    expect(employee.getName()).toEqual(expect.any(String));
+});
