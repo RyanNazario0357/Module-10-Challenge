@@ -20,4 +20,10 @@ test('gets employee name', () => {
 test('gets employee id', () => {
     const employee = new Employee('Steve', 1, "steve@domain.com");
     expect(employee.getID()).toEqual(expect.any(Number));
-}) 
+});
+
+test('gets employee email', () => {
+    const employee = new Employee('Steve', 1, "steve@domain.com");
+    expect(employee.getEmail()).toEqual(expect.any(String));
+});
+
