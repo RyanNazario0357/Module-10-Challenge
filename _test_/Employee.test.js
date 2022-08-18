@@ -27,3 +27,7 @@ test('gets employee email', () => {
     expect(employee.getEmail()).toEqual(expect.any(String));
 });
 
+test('create employee role', () => {
+    const employee = new Employee('Steve', 1, "steve@domain.com");
+    expect(employee.getRole()).toBe('Employee');
+});
