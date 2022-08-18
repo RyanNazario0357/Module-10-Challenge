@@ -16,3 +16,8 @@ test('gets employee name', () => {
     const employee = new Employee('Steve', 1, "steve@domain.com");
     expect(employee.getName()).toEqual(expect.any(String));
 });
+
+test('gets employee id', () => {
+    const employee = new Employee('Steve', 1, "steve@domain.com");
+    expect(employee.getID()).toEqual(expect.any(Number));
+}) 
