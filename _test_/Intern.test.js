@@ -12,12 +12,14 @@ test('create intern object from employee', () => {
     console.log(`Intern Email: ${intern.email}`);
 });
 
-test('recieve github information', () => {
-    const engineer = new Engineer('Steve', 1, 'steve@domain.com', 'tvoisyabr');
-    expect(engineer.github).toEqual(expect.any(String));
+test('recieve school information', () => {
+    const intern = new Intern('Steve', 1, 'steve@domain.com', 'UCF');
+    expect(intern.school).toEqual(expect.any(String));
+    console.log(intern.school);
 });
 
-test('create engineer role', () => {
-    const engineer = new Engineer('Steve', 1, 'steve@domain.com', 'tvoisyabr');
-    expect(engineer.getRole()).toBe('Engineer');
+test('create intern role', () => {
+    const intern = new Intern('Steve', 1, 'steve@domain.com', 'UCF');
+    expect(intern.getRole()).toBe('Intern');
+    console.log(intern.getRole());
 });
