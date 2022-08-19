@@ -1,25 +1,24 @@
-const Intern = require('../lib/Intern');
+const Manager = require('../lib/Manager');
 
-test('create intern object from employee', () => {
-    const intern = new Intern('Steve, 1, "steve@domain.com', 'UCF');
+test('create manager object from employee', () => {
+    const manager = new Manager('Steve, 1, "steve@domain.com', '867-5309');
 
-    expect(intern.name).toEqual(expect.any(String));
-    expect(intern.id).toEqual(expect.any(Number));
-    expect(intern.email).toEqual(expect.any(String));
+    expect(manager.name).toEqual(expect.any(String));
+    expect(manager.id).toEqual(expect.any(Number));
+    expect(manager.email).toEqual(expect.any(String));
 
-    console.log(`Intern Name: ${intern.name}`);
-    console.log(`Intern ID: ${intern.id}`);
-    console.log(`Intern Email: ${intern.email}`);
+    console.log(`Manager Name: ${manager.name}`);
+    console.log(`Manager ID: ${manager.id}`);
+    console.log(`Manager Email: ${manager.email}`);
 });
 
-test('recieve school information', () => {
-    const intern = new Intern('Steve', 1, 'steve@domain.com', 'UCF');
-    expect(intern.school).toEqual(expect.any(String));
-    console.log(intern.school);
+test('office number created', () => {
+    const manager = new Manager('Steve', 2, 'steve@domain.com', '867-5309');
+    expect(manager.officeNumber).toEqual(expect.any(String));
+    console.log('office Number: ${manager.officeNumber}');
 });
 
-test('create intern role', () => {
-    const intern = new Intern('Steve', 1, 'steve@domain.com', 'UCF');
-    expect(intern.getRole()).toBe('Intern');
-    console.log(intern.getRole());
+test('create manager role', () => {
+    const manager = new Manager('Steve', 2, 'steve@domain.com', '867-5309');
+    expect(manager.getRole()).toBe('Manager')
 });
