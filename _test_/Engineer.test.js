@@ -11,3 +11,9 @@ test('creates engineer object from employee', () => {
     console.log(`Engineer ID: ${engineer.id}`);
     console.log(`Engineer Email: ${engineer.email}`);
 });
+
+test('recieve github information', () => {
+    const engineer = new Engineer('Steve', 1, 'steve@domain.com', 'tvoisyabr');
+    expect(engineer.github).toEqual(expect.any(String));
+});
+
