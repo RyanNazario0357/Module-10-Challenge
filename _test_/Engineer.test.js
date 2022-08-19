@@ -17,3 +17,7 @@ test('recieve github information', () => {
     expect(engineer.github).toEqual(expect.any(String));
 });
 
+test('create engineer role', () => {
+    const engineer = new Engineer('Steve', 1, 'steve@domain.com', 'tvoisyabr');
+    expect(engineer.getRole()).toBe('Engineer');
+});
