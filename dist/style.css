@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:beige;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:medium;
+    font-weight:500;
+}
+
+.container-fluid {
+    padding:0;
+}
+
+.jumbotron {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    font-size: small;
+    text-align: center;
+    letter-spacing: normal;
+    font-weight: 200;
+}
+
+/*employee cards*/
+.main {
+    width:auto;
+    margin:auto;
+}
+
+div.card {
+    margin: 13px 0;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+h3.card-title {
+    font-size: smaller;
+    color: aqua;
+    margin: 0;
+}
