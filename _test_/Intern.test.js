@@ -1,13 +1,13 @@
 const Intern = require('../lib/Engineer');
 
-test('creates engineer object from employee', () => {
-    const engineer = new Engineer('Steve, 1, "steve@domain.com', 'tvoisyabr');
+test('create intern object from employee', () => {
+    const intern = new Intern('Steve, 1, "steve@domain.com', 'UCF');
 
-    expect(engineer.name).toEqual(expect.any(String));
-    expect(engineer.id).toEqual(expect.any(Number));
-    expect(engineer.email).toEqual(expect.any(String));
+    expect(intern.name).toEqual(expect.any(String));
+    expect(intern.id).toEqual(expect.any(Number));
+    expect(intern.email).toEqual(expect.any(String));
 
-    console.log(`Engineer Name: ${engineer.name}`);
-    console.log(`Engineer ID: ${engineer.id}`);
-    console.log(`Engineer Email: ${engineer.email}`);
+    console.log(`Intern Name: ${intern.name}`);
+    console.log(`Intern ID: ${intern.id}`);
+    console.log(`Intern Email: ${intern.email}`);
 });
