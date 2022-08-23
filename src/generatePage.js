@@ -9,5 +9,9 @@ const generateCards = data => {
             const managerInfo = generateManager(employee);
             cardArray.push(managerinfo);
         }
+        if (role === 'Engineer') {
+            const engineerInfo = generateEngineer(employee);
+            cardArray.push(engineerinfo);
+        }
     }
 } 
