@@ -24,7 +24,7 @@ const generateCards = data => {
     return createTeam;
 };
 
-
+//manager card
 const generateManager = manager => {
     if (!manager) {
         return '';
@@ -42,6 +42,29 @@ const generateManager = manager => {
     <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
     </ul>
     </div>
+    </div>
+    </div>
+    `;
+};
+
+//intern card
+const generateIntern = intern => {
+    if (!intern) {
+        return '';
+    }
+    return `<div class="col-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>${intern.name}</h2>
+            <h5 class="card-title"><i class ="fa-solid fa-mug-hot"></i>  ${intern.getRole()}</h5>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: ${intern.id}</li>
+                <li class="list-group-item">E-mail: <a href="mailto:${intern.email}">${intern.email}</a></li>
+                <li class="list-group-item">School: ${intern.school}</li>
+            </ul>
+        </div>
     </div>
     </div>
     `;
