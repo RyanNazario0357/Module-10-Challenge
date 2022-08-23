@@ -31,5 +31,9 @@ const generateManager = manager => {
     }
     return `<div class="col-md-4">
     <div class="card">
-    `
+    <div class="card-header">
+    <h2>${manager.name}</h2>
+    <h5 class="card-title"><i class ="fa-solid fa-mug-hot"></i>  ${manager.getRole()}</h5>
+    </div>
+    <div class="card-body"`
 }
