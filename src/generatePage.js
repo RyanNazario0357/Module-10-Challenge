@@ -35,5 +35,14 @@ const generateManager = manager => {
     <h2>${manager.name}</h2>
     <h5 class="card-title"><i class ="fa-solid fa-mug-hot"></i>  ${manager.getRole()}</h5>
     </div>
-    <div class="card-body"`
-}
+    <div class="card-body">
+    <ul class="list-group">
+    <li class="list-group-item">ID: ${engineer.id}</li>
+    <li class="list-group-item">E-mail: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+    <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    `;
+};
