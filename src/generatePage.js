@@ -18,5 +18,8 @@ const generateCards = data => {
             cardArray.push(interninfo);
         }
     }
-    
-} 
+    const employeeInnfo = cardArray.join('');
+
+    const createTeam = generatePage(employeeInfo);
+    return createTeam;
+};
