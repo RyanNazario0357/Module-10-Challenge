@@ -81,5 +81,13 @@ const generatePage = data => {
     <title>Team Profile</title>
 </head>
 <body>
-    `
+    
+<div class="container-fluid>"
+    <div cllass="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Team</h1>
+    </div>
+</div>
+`
+
 }
