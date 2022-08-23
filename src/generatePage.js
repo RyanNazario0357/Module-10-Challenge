@@ -13,5 +13,10 @@ const generateCards = data => {
             const engineerInfo = generateEngineer(employee);
             cardArray.push(engineerinfo);
         }
+        if (role === 'intern') {
+            const internInfo = generateIntern(employee);
+            cardArray.push(interninfo);
+        }
     }
+    
 } 
