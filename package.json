@@ -1,0 +1,28 @@
+{
+    "dependencies": {
+        "inquirer": "^8.2.4"
+    },
+    "devDependencies": {
+        "jest": "^28.1.3"
+    },
+    "name": "Team",
+    "description": "## Profile Generator",
+    "version": "1.0.0",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RyanNazario0357/Module-10-Challenge.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RyanNazario0357/Module-10-Challenge/issues"
+    },
+    "homepage": "https://github.com/RyanNazario0357/Module-10-Challenge#readme"
+}
