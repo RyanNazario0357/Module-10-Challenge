@@ -88,6 +88,14 @@ const generatePage = data => {
         <h1 class="display-4">Team</h1>
     </div>
 </div>
-`
 
-}
+<div class="row justify-content-center main">
+    ${data}
+    </div>
+    </div>
+    
+    </body>
+    </html>
+    `;
+};
+module.exports = generateCards;
