@@ -18,8 +18,18 @@ const generateCards = data => {
             cardArray.push(interninfo);
         }
     }
-    const employeeInnfo = cardArray.join('');
+    const employeeInfo = cardArray.join('');
 
     const createTeam = generatePage(employeeInfo);
     return createTeam;
 };
+
+
+const generateManager = manager => {
+    if (!manager) {
+        return '';
+    }
+    return `<div class="col-md-4">
+    <div class="card">
+    `
+}
