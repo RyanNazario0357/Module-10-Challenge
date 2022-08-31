@@ -26,20 +26,19 @@ const addManager = () => {
                     console.log('Enter Name');
                 }
                 }
-            }
-        };
+            },
         {
-            type: 'input',
-            name: 'id',
-            message: 'Enter Manager ID',
+            type:'input',
+            name:'id',
+            message:'Enter Manager ID',
             validate: managerId => {
                 if (managerId) {
                     return true;
                 } else {
                     console.log('Enter Valid ID');
                 }
-                }
-            },
+            }
+        },
             {
                 type:'input',
                 name:'email',
@@ -48,11 +47,20 @@ const addManager = () => {
                     if (managerEmail){
                         return true;
                     } else {
-                        console.log(Enter Email Address);
+                        console.log('Enter Email Address');
                     }
+                }
+            },
+                {
+                    type:'input',
+                    name: 'officeNumber',
+                    message: 'Managers office number',
+                    validate: managerOfficeNumber => {
+                        if (managerOfficeNumber) {
+                            return true;
+                        } else {
+                            console.log('Enter a Valid Number');
+                        }
                     }
-                },
-            }
-        }
-    ])
-}
+                }
+            ])
