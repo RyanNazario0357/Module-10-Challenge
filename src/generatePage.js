@@ -37,6 +37,28 @@ const generateManager = manager => {
     </div>
     <div class="card-body">
     <ul class="list-group">
+    <li class="list-group-item">ID: ${manager.id}</li>
+    <li class="list-group-item">E-mail: <a href="mailto:${manager.email}">${manager.email}</a></li>
+    <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    `;
+};
+
+const generateEngineer = engineer => {
+    if (!engineer) {
+        return '';
+    }
+    return `<div class="col-md-4">
+    <div class="card">
+    <div class="card-header">
+    <h2>${engineer.name}</h2>
+    <h5 class="card-title"><i class ="fa-solid fa-mug-hot"></i>  ${engineer.getRole()}</h5>
+    </div>
+    <div class="card-body">
+    <ul class="list-group">
     <li class="list-group-item">ID: ${engineer.id}</li>
     <li class="list-group-item">E-mail: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
     <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
@@ -46,7 +68,6 @@ const generateManager = manager => {
     </div>
     `;
 };
-
 //intern card
 const generateIntern = intern => {
     if (!intern) {
