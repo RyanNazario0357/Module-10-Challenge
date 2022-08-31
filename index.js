@@ -40,6 +40,19 @@ const addManager = () => {
                 }
                 }
             },
+            {
+                type:'input',
+                name:'email',
+                message:'Manager E-Mail Address',
+                validate: managerEmail => {
+                    if (managerEmail){
+                        return true;
+                    } else {
+                        console.log(Enter Email Address);
+                    }
+                    }
+                },
+            }
         }
     ])
 }
