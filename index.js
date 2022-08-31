@@ -70,7 +70,7 @@ const addManager = () => {
             })
         };
 
-        const add Employee = () => {
+        const addEmployee = () => {
             console.log(`
             ==================
             Add a Team Member
@@ -142,5 +142,23 @@ const addManager = () => {
                                 }
                             }
                         },
-                        
+                        {
+                            type:'confirm',
+                            name: 'addEmployee',
+                            message: 'Would you like to add another Employee?',
+                            when: (choice) =>choice.role !== 'Finish Building Team',
+                            default: true
+                        }
                     ])
+                    .then(employeeData => {
+                        if(employeeData.role === 'Engineer') {
+                            const engineer = new Engineer (employeeData.name,employeeData.id,employeeData.email,employeeData.github);
+                            teamArray.push(engineer);
+                        }else if (employeeData.role === 'Intern') {
+                            const intern = new Intern  (employeeData.name,employeeData.id,employeeData.email,employeeData.school);
+                            teamArray.push(intern);
+                        }
+
+                        
+                        }
+                    })
