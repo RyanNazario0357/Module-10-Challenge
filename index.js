@@ -1,4 +1,4 @@
-const inquirer = require('inquirere');
+const inquirer = require('inquirer');
 const fs = require('fs');
 const generateCards = require('./src/generatePage.js');
 
