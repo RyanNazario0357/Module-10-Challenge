@@ -28,6 +28,18 @@ const addManager = () => {
                 }
             }
         };
-        {}
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter Manager ID',
+            validate: managerId => {
+                if (managerId) {
+                    return true;
+                } else {
+                    console.log('Enter Valid ID');
+                }
+                }
+            },
+        }
     ])
 }
