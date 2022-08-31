@@ -181,3 +181,21 @@ const addManager = () => {
                                 });
                             });
                         };
+
+                        addManager()
+                        .then(employeeData => {
+                            return addEmployee(empoyeeData)
+                        })
+                        .then(data => {
+                            console.log(data);
+                            return generateCards(data);
+                        })
+                        .then(newFile => {
+                            return createFile(newFile);
+                        })
+                        .then(writeFileResponse => {
+                            console.log(writeFileResponse.message);
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        })
