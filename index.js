@@ -69,3 +69,78 @@ const addManager = () => {
                 teamArray.push(manager);
             })
         };
+
+        const add Employee = () => {
+            console.log(`
+            ==================
+            Add a Team Member
+            ==================
+            `);
+            return inquirer.prompt([
+                {
+                    type:'input',
+                    name: 'name',
+                    message: 'Add a Team Member?',
+                    when: (choice) =>choice.role !== 'Finish Building Team',
+                    validate: employeeName => {
+                        if (employeeName) {
+                            return true;
+                        } else {
+                            console.log('Enter Name');
+                        }
+                        }
+                    },
+                {
+                    type:'input',
+                    name:'id',
+                    message:'Enter Employee ID',
+                    when: (choice) =>choice.role !== 'Finish Building Team',
+                    validate: employeeId => {
+                        if (employeeId) {
+                            return true;
+                        } else {
+                            console.log('Enter Valid ID');
+                        }
+                    }
+                },
+                    {
+                        type:'input',
+                        name:'email',
+                        message:'Employee E-Mail Address',
+                        when: (choice) =>choice.role !== 'Finish Building Team',
+                        validate: employeeEmail => {
+                            if (employeeEmail){
+                                return true;
+                            } else {
+                                console.log('Enter Email Address');
+                            }
+                        }
+                    },
+                        {
+                            type:'input',
+                            name: 'github',
+                            message: 'Github Username',
+                            when: (choice) =>choice.role !== 'Engineer',
+                            validate: githubInput => {
+                                if (githubInput) {
+                                    return true;
+                                } else {
+                                    console.log('Enter a Github Username');
+                                }
+                            }
+                        },
+                        {
+                            type:'input',
+                            name: 'school',
+                            message: 'Enter Interns School',
+                            when: (choice) =>choice.role !== 'Intern',
+                            validate: schoolInput => {
+                                if (schoolInput) {
+                                    return true;
+                                } else {
+                                    console.log('Enter a School');
+                                }
+                            }
+                        },
+                        
+                    ])
