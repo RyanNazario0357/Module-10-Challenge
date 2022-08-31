@@ -1,1 +1,2 @@
 # Module-10-Challenge
+## With the Team Generator you can create a team for you work place. You can input a Manager and his email included with his office number and id. In the employee side you can input wether they are n intern or an engineer and insert their emails and what school they went to.
