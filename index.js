@@ -159,6 +159,25 @@ const addManager = () => {
                             teamArray.push(intern);
                         }
 
-                        
+                        if (employeeData.addEmployee) {
+                            return addEmployee(teamArray);
+                        } else {
+                            return teamArray;
                         }
-                    })
+                        })
+                        };
+
+                        const createFile = (fileName, teamArray) => {
+                            return new Promise((resolve, reject) => {
+                                fs.writeFile('./dist/index.html', fileName, err => {
+                                    if (err) {
+                                        reject(err);
+                                        return;
+                                    }
+                                    resolve({
+                                        ok: true,
+                                        message:'Congrats! A New Team Member has been Added'
+                                    });
+                                });
+                            });
+                        };
