@@ -64,3 +64,8 @@ const addManager = () => {
                     }
                 }
             ])
+            .then(managerData => {
+                const manager = new Manager (managerData.name, managerData.id, managerData.email, managerData.officeNumber);
+                teamArray.push(manager);
+            })
+        };
